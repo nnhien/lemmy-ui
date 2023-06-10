@@ -317,7 +317,7 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
     }
   }
 
-  createdLine() {
+A  createdLine() {
     const post_view = this.props.post_view;
     const url = post_view.post.url;
     const body = post_view.post.body;
@@ -340,7 +340,9 @@ export class PostListing extends Component<PostListingProps, PostListingState> {
           {this.props.showCommunity && (
             <span>
               <span className="mx-1"> {i18n.t("to")} </span>
-              <CommunityLink community={post_view.community} />
+              <CommunityLink 
+                useApubName={true}
+                community={post_view.community} />
             </span>
           )}
         </li>
